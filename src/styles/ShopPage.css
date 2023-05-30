@@ -1,0 +1,83 @@
+@keyframes scrollIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.shop-page {
+    animation: scrollIn 3s ease-in-out forwards;
+}
+
+@font-face {
+    font-family: "Boucherie Block Bold";
+    src: url("../fonts/Boucherie\ Block\ Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "One Slice";
+    src: url("../fonts/One\ Slice.otf") format("truetype");
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hero-container {
+    padding: 0 40px; /* Apply 20px padding to the left and right */
+    padding-top: 0; /* Remove padding on the top */
+    padding-bottom: 0; /* Remove padding on the bottom */
+}
+
+.hero-img {
+    width: 100%;
+    height: 1300px;
+    object-fit: cover;
+}
+
+.hero-slider {
+    position: relative;
+}
+
+.slider-images {
+    display: flex;
+}
+
+.slider-images img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slider-images img.active {
+    opacity: 1;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-dots span {
+    width: 10px;
+    height: 10px;
+    background-color: #999;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dots span.active {
+    background-color: #333;
+}

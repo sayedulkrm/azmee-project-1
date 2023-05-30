@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .container {
+    animation: fade-in 3s ease-in-out forwards;
+    font-family: "IBM Plex Mono", monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    width: 220px;
+    height: 100px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .password-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+  
+  .password-input {
+    font-family: "IBM Plex Mono", monospace;
+    letter-spacing: 3px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 30px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .join-dropdown {
+    font-family: "IBM Plex Mono", monospace;
+    width: 220px;
+    letter-spacing: 2px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    padding: 10px 30px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 0;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    transition: border-color 0.3s, background-color 0.3s; /* Add a transition for smooth effect */
+  }
+  
+  .join-dropdown::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s; /* Add a transition for smooth effect */
+  }
+  
+  .join-dropdown:hover {
+    background-color: rgba(8, 58, 197, 0.123);
+    border-color: rgb(192, 192, 192); /* Show the white border outline on hover */
+  }
+  
+  .join-dropdown.active,
+  .join-dropdown:focus {
+    background-color: rgba(
+      8,
+      58,
+      197,
+      0.123
+    ); /* Set the desired color when clicked or focused */
+    border-color: rgb(
+      192,
+      192,
+      192
+    ); /* Set the desired border color when clicked or focused */
+  }
+  
+  .dropdown-content button:hover {
+    border-color: rgb(192, 192, 192);
+    background-color: rgba(8, 58, 197, 0.123);
+  }
+  
+  .dropdown-content button:hover::after {
+    border-color: rgb(192, 192, 192);
+  }
+  
+  .dropdown-content {
+    font-family: "IBM Plex Mono", monospace;
+    top: 50%;
+    left: 50%;
+    width: 219px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-left: -14px;
+    margin-bottom: -14px;
+  }
+  
+  .dropdown-content input {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 40px;
+  }
+  
+  .dropdown-content input:first-child {
+    margin-bottom: 0px;
+  }
+  
+  .dropdown-content button {
+    font-family: "IBM Plex Mono", monospace;
+    letter-spacing: 2px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    padding: 1px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    transition: border-color 0.3s; /* Add a transition for smooth effect */
+    width: 100%;
+    height: 40px;
+  }
+  
+  .dropdown-content button::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border: 1px rgb(192, 192, 192);
+    border-radius: 10px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-divider {
+    border: none;
+    border-bottom: 1px solid rgb(192, 192, 192); /* Light grey color with opacity */
+    margin: 0px;
+    opacity: 0.4;
+  }
+  
+  .currency-button {
+    font-family: "IBM Plex Mono";
+    position: absolute;
+    font-size: 11px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    top: -250px;
+    left: -547px;
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  .currency-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px; /* Adjust the distance of the underline from the text */
+    height: 0.05rem; /* Adjust the thickness of the underline */
+    background-color: white; /* Adjust the color of the underline */
+    visibility: hidden; /* Hide the underline by default */
+    transition: visibility 0s, width 0.2s; /* Add a transition effect */
+  }
+  
+  .currency-button:hover::after {
+    visibility: visible; /* Show the underline on hover */
+    width: 74px; /* Expand the underline to full width */
+    left: 15px;
+  }
+  
+  .currency-dropdown {
+    position: absolute;
+    top: -215px; /* Adjust the top position as per your requirements */
+    left: -535px;
+  }
+  
+  .currency-container {
+    border-radius: 10px;
+    width: 285px;
+    height: 480px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .currency-container p {
+    font-family: "IBM Plex Mono";
+    font-size: 11px;
+    color: white;
+    margin-bottom: 60px; /* Adjust the margin between each paragraph */
+  }
+  
+  .countries-regions {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .countries-regions p {
+    font-family: "IBM Plex Mono";
+    font-size: 11px;
+    color: white;
+    margin-right: 87px; /* Adjust the margin between "REGIONS" and "[225]" */
+  }
+  
+  .countries-regions span {
+    font-family: "IBM Plex Mono";
+    font-size: 11px;
+    color: white;
+  }
